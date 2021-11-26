@@ -5,20 +5,13 @@ double deg2rad(double inde){
     return (inde*M_PI)/180;
 }
 double rad2deg(double inra){
-    return 90-(inra*(180/M_PI));
-    // if(inra =! 0){
-    // return 90-(inra*(180/M_PI));
-    // }
-    // else{
-    //     return 0;
-    // } สำหรับแก้ไขบัคเมื่อ ใส่องศาเป็น 0 ทั้งหมดแล้วผลขององศาลัพธ์จะออกมาเป็น 90 (แต่ใส่ในตัวทดลองแล้วผิด)
-        
+    return (inra*(180/M_PI));
 }
 double findXComponent(double le1,double le2,double an1,double an2){
-    return le1*sin(an1) + le2*sin(an2);
+    return le1*cos(an1) + le2*cos(an2);
 }
 double findYComponent(double le1,double le2,double an1,double an2){
-    return le1*cos(an1) + le2*cos(an2);
+    return le1*sin(an1) + le2*sin(an2);
 }
 double pythagoras(double x,double y){
     return sqrt((x*x)+(y*y));
